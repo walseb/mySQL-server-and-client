@@ -10,8 +10,9 @@ gcc -L/usr/lib/mysql -lmysqlclient mysql-wrapper.c server-ui.c server.c -o serve
 ** Database setup
 Database server used: mysql(i used mariadb, any mysql compatible database should work)
 
-database name: uppgift
-database table name: UppgiftTable
+database name: =uppgift=
+
+database table name: =UppgiftTable=
 
 ** How to run server
 #+BEGIN_SRC bash
