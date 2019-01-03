@@ -1,0 +1,34 @@
+* Server
+** How to compile server
+Requires the mysql library
+
+Use makefile or execute:
+#+BEGIN_SRC compile
+gcc -L/usr/lib/mysql -lmysqlclient mysql-wrapper.c server-ui.c server.c -o server
+#+END_SRC
+
+** Database setup
+Database server used: mysql(i used mariadb, any mysql compatible database should work)
+
+database name: uppgift
+database table name: UppgiftTable
+
+** How to run server
+#+BEGIN_SRC bash
+./server
+#+END_SRC
+
+* Client
+** How to compile client
+Requires the latest GTK 3 library
+
+[[https://developer.gnome.org/gtk3/stable/gtk-compiling.html][Read this]] to get your platform specific include directories
+
+#+BEGIN_SRC compile
+gcc client.c client-gui.c -o client INSERT_YOUR_PLATFORM_SPECIFIC_INCLUDE_DIRECTORIES
+#+END_SRC
+
+** How to run client
+#+BEGIN_SRC bash
+./client
+#+END_SRC
